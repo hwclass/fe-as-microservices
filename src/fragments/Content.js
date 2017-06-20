@@ -3,7 +3,7 @@ import React from 'react'
 import universal from 'react-universal-component'
 import styles from '../css/App.css'
 
-const LoginForm = universal(() => import(/* webpackChunkName: 'Example' */ '../components/LoginForm'), {
+const LoginForm = universal(() => import(/* webpackChunkName: 'LoginForm' */ '../components/LoginForm'), {
   path: path.resolve(__dirname, '../components/LoginForm'),
   resolve: () => require.resolveWeak('../components/LoginForm'),
   chunkName: 'LoginForm',

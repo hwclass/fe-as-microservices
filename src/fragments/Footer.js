@@ -3,7 +3,7 @@ import React from 'react'
 import universal from 'react-universal-component'
 import styles from '../css/App.css'
 
-const Links = universal(() => import(/* webpackChunkName: 'Example' */ '../components/Links'), {
+const Links = universal(() => import(/* webpackChunkName: 'Links' */ '../components/Links'), {
   path: path.resolve(__dirname, '../components/Links'),
   resolve: () => require.resolveWeak('../components/Links'),
   chunkName: 'Links',

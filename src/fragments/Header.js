@@ -10,7 +10,7 @@ const Example = universal(() => import(/* webpackChunkName: 'Example' */ '../com
   minDelay: 500
 })
 
-const Button = universal(() => import(/* webpackChunkName: 'Example' */ '../units/Button'), {
+const Button = universal(() => import(/* webpackChunkName: 'Button' */ '../units/Button'), {
   path: path.resolve(__dirname, '../units/Button'),
   resolve: () => require.resolveWeak('../units/Button'),
   chunkName: 'Button',
