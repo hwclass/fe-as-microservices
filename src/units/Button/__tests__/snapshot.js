@@ -4,15 +4,15 @@ import styled from 'styled-components';
 import 'jest-styled-components'
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import Example from '../';
+import Button from '../';
 
-const StyledExample = styled(Example)``;
+const StyledButton = styled(Button)``;
 
-describe('Example component', () => {
+describe('Button component', () => {
   test('parses the correct styled component', () => {
-    const example = renderer.create(
-      <Example/>
+    const button = renderer.create(
+      <Button/>
     ).toJSON();
-    expect(example).toMatchStyledComponentsSnapshot()
+    expect(button).toMatchStyledComponentsSnapshot()
   })
 })

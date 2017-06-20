@@ -1,8 +1,15 @@
 import React from 'react'
-import styles from './style.css'
+import styled from 'styled-components';
 
-export default () => (
-  <div className={styles.paragraph}>
+const Example = ({ className }) => (
+	<div className={className}>
     <span>Example Component</span>
 	</div>
 )
+
+const StyledExample = styled(Example)`
+  color: blue;
+  font-size: 11px;
+}`;
+
+export default StyledExample

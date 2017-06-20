@@ -1,13 +1,24 @@
 // __tests__/dom.js
 
 import React from 'react';
-import {shallow} from 'enzyme';
+import styled from 'styled-components';
+import 'jest-styled-components'
+import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import Example from '../';
 
-test('Example component parses default text', () => {
-  const example = shallow(
-    <Example />
-  );
+const StyledExample = styled(Example)``;
 
-  expect(example.text()).toEqual('Example Component');
-});
+describe('Example component', () => {
+  test('renders without crashing', () => {
+    shallow(<Example />);
+  })
+
+  test('parses with the correct style rules', () => {
+    const example = renderer.create(
+      <Example/>
+    ).toJSON();
+    expect(example).toHaveStyleRule('color', 'blue')
+    expect(example).toHaveStyleRule('font-size', '11px')
+  })
+})

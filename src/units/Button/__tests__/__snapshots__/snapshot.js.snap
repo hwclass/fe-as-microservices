@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component parses the correct styled component 1`] = `
+.gsIPHz {
+  color: green;
+  font-size: 12px;
+}
+
+<button
+  className="sc-bdVaJa gsIPHz"
+>
+  My litttle, tiny button
+</button>
+`;

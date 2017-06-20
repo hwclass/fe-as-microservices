@@ -10,9 +10,9 @@ const Example = universal(() => import(/* webpackChunkName: 'Example' */ '../com
   minDelay: 500
 })
 
-const Button = universal(() => import(/* webpackChunkName: 'Button' */ '../units/Button'), {
-  path: path.resolve(__dirname, '../units/Button'),
-  resolve: () => require.resolveWeak('../units/Button'),
+const Button = universal(() => import(/* webpackChunkName: 'Button' */ '../units/Button/'), {
+  path: path.resolve(__dirname, '../units/Button/'),
+  resolve: () => require.resolveWeak('../units/Button/'),
   chunkName: 'Button',
   minDelay: 500
 })
@@ -34,10 +34,10 @@ export default class Header extends React.Component {
     return (
       <div>
         {
-            <div>
-              <Example />
-              <Button />
-            </div>
+          <div>
+            <Example />
+            <Button />
+          </div>
         }
         {!this.state.show && 'Async Component Not Requested Yet'}
       </div>

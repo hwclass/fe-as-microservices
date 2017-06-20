@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Example component parses default text 1`] = `
+exports[`Example component parses the correct styled component 1`] = `
+.jESEkU {
+  color: blue;
+  font-size: 11px;
+}
+
 <div
-  className="style__paragraph--2ELag"
+  className="sc-bdVaJa jESEkU"
 >
   <span>
     Example Component

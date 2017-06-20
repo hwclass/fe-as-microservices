@@ -15,10 +15,13 @@
     "lint": "eslint --fix src server webpack",
     "format": "prettier --single-quote --semi=false --write '{src,server,webpack}/**/*.js' && npm run lint",
     "storybook": "start-storybook -p 6006",
-    "test": "jest"
+    "test": "jest",
+    "update-test": "npm test -- -u",
+    "coverage": "npm test -- --coverage"
   },
   "dependencies": {
     "express": "^4.15.3",
+    "jest-styled-components": "^3.1.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.5",
