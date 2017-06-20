@@ -24,6 +24,16 @@ const Footer = universal(() => import(/* webpackChunkName: 'Footer' */ '../fragm
   minDelay: 500
 })
 
+// aggregate fragments
+/*
+const Header = aggregator('src/fragments/Header', 'Header')
+const Content = aggregator('src/fragments/Content', 'Content')
+const Footer = aggregator('src/fragments/Footer', 'Footer')
+*/
+
+// combine fragments
+// const fragments = combiner([Header, Content, Footer])
+
 export default class App extends React.Component {
   state = {
     show: true
@@ -41,11 +51,11 @@ export default class App extends React.Component {
     return (
       <div className="page">
         {
-            <div>
-              <Header />
-              <Content />
-              <Footer />
-            </div>
+          <div>
+            <Header />
+            <Content />
+            <Footer />
+          </div>
         }
         {!this.state.show && 'Async Component Not Requested Yet'}
       </div>
